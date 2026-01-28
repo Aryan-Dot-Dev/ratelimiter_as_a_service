@@ -1,0 +1,34 @@
+{
+  "name": "@suspiciousdev21/rl-aas",
+  "version": "0.1.2",
+  "description": "Token-bucket rate limiter (rateLimiter + TokenLimiterStore)",
+  "type": "module",
+  "private": false,
+  "files": ["dist"],
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "lru-cache": "^11.2.5"
+  },
+  "exports": {
+    "./core/tokenBucket": {
+      "import": "./dist/core/tokenBucket.js",
+      "types": "./dist/core/tokenBucket.d.ts"
+    },
+    "./middleware/rateLimiter": {
+      "import": "./dist/middleware/rateLimiter.js",
+      "types": "./dist/middleware/rateLimiter.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepare": "bun run build",
+    "test": "bun test",
+    "clean": "rm -rf ./dist"
+  }
+}

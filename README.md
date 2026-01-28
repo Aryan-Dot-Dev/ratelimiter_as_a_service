@@ -1,4 +1,4 @@
-# Rate Limiter Package
+# Rate Limiter as a Service
 
 A lightweight, flexible token-bucket rate limiter for Node.js and edge runtimes (Bun, Deno). Built with TypeScript, fully typed, and designed for modern Fetch API-based applications.
 

@@ -355,14 +355,6 @@ async function withLogging(req: Request, res: Response, next: () => Promise<Resp
 
 ## Troubleshooting
 
-### Issue: Rate limits not working in distributed systems
-
-**Solution**: Use Redis store instead of in-memory store
-
-```typescript
-const store = new RedisRateLimiterStore(redis);
-```
-
 ### Issue: Memory growing unbounded
 
 **Solution**: The built-in `TokenLimiterStore` uses LRU cache with automatic cleanup. Ensure you're not creating new instances on every request:
@@ -402,7 +394,7 @@ MIT
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/your-org/ratelimiter/issues)
+- **Issues**: [GitHub Issues](https://github.com/Aryan-Dot-Dev/ratelimiter_as_a_service/issues)
 - **Email**: aryan.main21@gmail.com
 
 ---
